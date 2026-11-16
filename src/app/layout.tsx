@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-AO" className={`${archivo.variable} ${mono.variable}`}>
       <body>
-        <a href="#conteudo" className="btn fixed left-4 top-4 z-[60] -translate-y-24 focus:translate-y-0">
+        <a href="#conteudo" className="btn fixed left-4 top-4 z-60 -translate-y-24 focus:translate-y-0">
           Saltar para o conteúdo
         </a>
         <Header />

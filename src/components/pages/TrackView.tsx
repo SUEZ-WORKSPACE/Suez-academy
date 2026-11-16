@@ -53,11 +53,11 @@ export function TrackView({ track }: { track: Track }) {
                   </li>
                 ))}
               </ul>
-              <div key={open} role="tabpanel" className="grid content-start gap-5 p-6 [animation:fade_400ms_ease-out]">
+              <div key={open} role="tabpanel" className="grid content-start gap-5 p-6 animate-[fade_400ms_ease-out]">
                 <p className="t-label" style={{ color: tone }}>
                   módulo {String(open + 1).padStart(2, "0")} de {String(track.modules.length).padStart(2, "0")}
                 </p>
-                <h2 className="t-h2 !text-[clamp(1.75rem,3vw,2.5rem)]">{mod.title}</h2>
+                <h2 className="t-h2 text-[clamp(1.75rem,3vw,2.5rem)]!">{mod.title}</h2>
                 <ul className="grid gap-3">
                   {mod.topics.map((t) => (
                     <li key={t} className="flex items-baseline gap-3 border-t border-line pt-3">
@@ -102,7 +102,7 @@ export function TrackView({ track }: { track: Track }) {
                   <span className="t-mono text-[1.5rem] leading-none" style={{ color: tone }}>
                     0{k + 1}
                   </span>
-                  <span className="t-h3 !text-[1.25rem] !font-[600]">{o}</span>
+                  <span className="t-h3 text-[1.25rem]! font-semibold!">{o}</span>
                 </li>
               ))}
             </ol>

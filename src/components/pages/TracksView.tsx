@@ -20,7 +20,7 @@ export function TracksView() {
         ))}
       </section>
 
-      <section className="shell pb-[var(--section)]">
+      <section className="shell pb-(--section)">
         <h2 data-reveal className="t-label mb-6 text-ink-faint">// comparar trilhas</h2>
         <div data-reveal className="overflow-x-auto rounded-lg border border-line">
           <table className="w-full min-w-[720px] text-left text-[0.9375rem]">

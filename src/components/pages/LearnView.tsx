@@ -16,7 +16,7 @@ export function LearnView() {
         bit="Aperta o cinto e faz scroll 🚀"
       />
       <Tunnel />
-      <section className="shell py-[var(--section)]">
+      <section className="shell py-(--section)">
         <p data-reveal className="t-label mb-4 text-suez">// tree ./formacoes</p>
         <h2 data-reveal className="t-h2 mb-14 max-w-[20ch]">E aqui está tudo, organizado por trilha.</h2>
         <div className="grid gap-x-10 gap-y-14 md:grid-cols-2 lg:grid-cols-3">

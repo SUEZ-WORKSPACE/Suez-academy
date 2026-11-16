@@ -26,8 +26,8 @@ export function Ticker() {
           </span>
         ))}
       </div>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-surface to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-surface to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-linear-to-r from-surface to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-surface to-transparent" />
     </div>
   );
 }
@@ -51,13 +51,13 @@ export function TrackCard({ track }: { track: Track }) {
       href={`/formacoes/${track.slug}`}
       data-reveal
       onPointerEnter={() => say(`${track.title.split(":")[0]}? Excelente escolha 👀`, "think")}
-      className="spot group grid min-h-[420px] content-between gap-8 rounded-lg border border-line bg-surface p-6 transition-colors hover:border-[var(--tone)] sm:p-7"
+      className="spot group grid min-h-[420px] content-between gap-8 rounded-lg border border-line bg-surface p-6 transition-colors hover:border-(--tone) sm:p-7"
       style={{ "--tone": toneVar(track.tone) } as React.CSSProperties}
     >
       <div className="flex items-start justify-between">
         <span className="t-label text-ink-faint">trilha/{track.code}</span>
         <span
-          className="t-mono grid h-12 w-12 place-items-center rounded border border-line-strong text-[1.25rem] transition-transform duration-500 group-hover:rotate-[360deg]"
+          className="t-mono grid h-12 w-12 place-items-center rounded border border-line-strong text-[1.25rem] transition-transform duration-500 group-hover:rotate-360"
           style={{ color: toneVar(track.tone) }}
           aria-hidden="true"
         >
@@ -70,7 +70,7 @@ export function TrackCard({ track }: { track: Track }) {
       </div>
       <div className="overflow-hidden rounded border border-line bg-ground">
         <p className="t-label border-b border-line px-3 py-2 text-ink-faint">{track.file}</p>
-        <Code lines={track.snippet} numbers={false} className="px-3 py-3 !text-[0.75rem]" />
+        <Code lines={track.snippet} numbers={false} className="px-3 py-3 text-[0.75rem]!" />
       </div>
       <span className="t-mono flex items-center gap-2 text-[0.8125rem]" style={{ color: toneVar(track.tone) }}>
         ver programa <span className="transition-transform duration-200 group-hover:translate-x-1.5">→</span>

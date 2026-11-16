@@ -477,7 +477,7 @@ export const templates: Template[] = [
     track: "devops-e-cloud",
     kind: "terraform",
     description: "Ambientes dev, staging e produção descritos em código.",
-    stack: ["Terraform", "Azure", "AWS"],
+    stack: ["Terraform", "AWS"],
     tree: ["envs/", "  dev/", "  prod/", "modules/", "  network/", "  app/"],
   },
   {
@@ -504,7 +504,7 @@ export const templates: Template[] = [
     track: "product-management",
     kind: "canvas",
     description: "Problema, utilizador, proposta de valor e métricas numa só página.",
-    stack: ["Figma", "Miro"],
+    stack: ["Figma"],
     tree: ["produto/", "  problema.md", "  persona.fig", "  mvp.fig", "  metricas.md"],
   },
   {
@@ -529,5 +529,5 @@ export const method = [
 
 export const stackTicker = [
   "TypeScript", "React", "Next.js", "Node.js", "C#", ".NET", "Angular", "PostgreSQL", "Docker", "Kubernetes",
-  "GitHub Actions", "Azure", "AWS", "Terraform", "Linux", "Cisco", "Kali Linux", "Wireshark", "Scrum", "Kanban", "Figma",
+  "GitHub Actions", "AWS", "Terraform", "Linux", "Cisco", "Kali Linux", "Wireshark", "Scrum", "Figma",
 ];

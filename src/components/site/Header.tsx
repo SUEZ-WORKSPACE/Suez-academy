@@ -63,7 +63,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href="/contactos?inscricao=1" className="btn hidden !py-2.5 sm:inline-flex">
+          <Link href="/contactos?inscricao=1" className="btn hidden py-2.5! sm:inline-flex">
             Inscreve-te <span className="arrow" aria-hidden="true">→</span>
           </Link>
           <button

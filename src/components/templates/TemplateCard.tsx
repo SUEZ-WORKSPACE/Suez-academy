@@ -27,14 +27,14 @@ function Mock({ kind }: { kind: TemplateKind }) {
           <div className="grid content-start gap-2 rounded-sm bg-surface-2 p-2">{[0, 1, 2, 3, 4].map((i) => <span key={i}>{bar(i === 1 ? "90%" : "70%", i === 1 ? "var(--suez)" : undefined, 5)}</span>)}</div>
           <div className="grid content-start gap-2">
             <div className="grid grid-cols-3 gap-2">{["var(--fn)", "var(--str)", "var(--num)"].map((c) => <span key={c} className="grid gap-1 rounded-sm bg-surface-2 p-2">{bar("50%")}{bar("70%", c, 8)}</span>)}</div>
-            <div className="flex h-20 items-end gap-1.5 rounded-sm bg-surface-2 p-2">{[40, 65, 30, 80, 55, 92, 70, 48].map((h, i) => <span key={i} className="flex-1 rounded-t-sm bg-suez/80 transition-[height] duration-500 group-hover:[height:calc(var(--h)*1%)]" style={{ height: `${h * 0.7}%`, ["--h" as string]: h }} />)}</div>
+            <div className="flex h-20 items-end gap-1.5 rounded-sm bg-surface-2 p-2">{[40, 65, 30, 80, 55, 92, 70, 48].map((h, i) => <span key={i} className="flex-1 rounded-t-sm bg-suez/80 transition-[height] duration-500 group-hover:h-[calc(var(--h)*1%)]" style={{ height: `${h * 0.7}%`, ["--h" as string]: h }} />)}</div>
           </div>
         </div>
       );
     case "mobile":
       return (
         <div className="grid h-full place-items-center">
-          <div className="grid h-[150px] w-[80px] content-start gap-2 rounded-[14px] border-2 border-line-strong bg-ground p-2 transition-transform duration-500 group-hover:-rotate-6">
+          <div className="grid h-[150px] w-20 content-start gap-2 rounded-[14px] border-2 border-line-strong bg-ground p-2 transition-transform duration-500 group-hover:-rotate-6">
             <span className="mx-auto h-1 w-6 rounded-full bg-line-strong" />
             <span className="grid gap-1 rounded-md bg-suez p-1.5">{bar("40%", "var(--on-suez)", 3)}{bar("70%", "var(--on-suez)", 7)}</span>
             <div className="grid grid-cols-3 gap-1">{[0, 1, 2].map((i) => <span key={i} className="h-5 rounded bg-surface-2" />)}</div>
@@ -62,7 +62,7 @@ function Mock({ kind }: { kind: TemplateKind }) {
       return (
         <svg viewBox="0 0 200 130" className="h-full w-full p-3" aria-hidden="true">
           {[[100, 22, 50, 70], [100, 22, 150, 70], [50, 70, 25, 112], [50, 70, 75, 112], [150, 70, 125, 112], [150, 70, 175, 112]].map(([a, b, c, d], i) => (
-            <line key={i} x1={a} y1={b} x2={c} y2={d} stroke="var(--line-strong)" strokeWidth="1.5" strokeDasharray="4 3" className="[animation:dash_1.2s_linear_infinite]" />
+            <line key={i} x1={a} y1={b} x2={c} y2={d} stroke="var(--line-strong)" strokeWidth="1.5" strokeDasharray="4 3" className="animate-[dash_1.2s_linear_infinite]" />
           ))}
           {[[100, 22, "R1", "var(--num)"], [50, 70, "SW1", "var(--fn)"], [150, 70, "SW2", "var(--fn)"], [25, 112, "PC", "var(--ink-soft)"], [75, 112, "SRV", "var(--str)"], [125, 112, "PC", "var(--ink-soft)"], [175, 112, "AP", "var(--kw)"]].map(([x, y, l, c], i) => (
             <g key={i}>
@@ -159,7 +159,7 @@ export function TemplateCard({ template }: { template: Template }) {
           </div>
           <div className="grid gap-2 border-t border-line p-5">
             <p className="t-label text-ink-faint">{track?.title.split(/[:&]/)[0].trim()}</p>
-            <h3 className="t-h3 !text-[1.25rem]">{template.name}</h3>
+            <h3 className="t-h3 text-[1.25rem]!">{template.name}</h3>
             <p className="text-[0.875rem] text-ink-soft">{template.description}</p>
             <div className="mt-1 flex flex-wrap gap-1.5">
               {template.stack.map((s) => (
@@ -194,7 +194,7 @@ export function TemplateCard({ template }: { template: Template }) {
             <p className="t-mono text-[0.75rem] text-ink-faint">
               <span className="text-str">$</span> git clone academy/{template.id}
             </p>
-            <Link href={`/contactos?inscricao=1&formacao=${template.track}`} className="btn justify-center !py-2.5">
+            <Link href={`/contactos?inscricao=1&formacao=${template.track}`} className="btn justify-center py-2.5!">
               Quero usar este template <span className="arrow" aria-hidden="true">→</span>
             </Link>
           </div>

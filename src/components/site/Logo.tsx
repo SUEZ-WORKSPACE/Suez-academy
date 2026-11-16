@@ -19,10 +19,10 @@ export function Logo({ className = "" }: { className?: string }) {
     <span className={`inline-flex items-center gap-2.5 ${className}`} aria-label="Suez Academy" role="img">
       <Mark className="h-10 w-10 text-suez transition-transform duration-700 group-hover:rotate-90" />
       <span className="grid leading-none" aria-hidden="true">
-        <span className="text-[1.375rem] font-[800] tracking-[-0.01em]" style={{ fontVariationSettings: '"wdth" 125' }}>
+        <span className="text-[1.375rem] font-extrabold tracking-[-0.01em]" style={{ fontVariationSettings: '"wdth" 125' }}>
           SUEZ
         </span>
-        <span className="mt-0.5 flex items-center gap-1.5 text-[0.5625rem] font-[700] tracking-[0.14em]" style={{ fontVariationSettings: '"wdth" 112' }}>
+        <span className="mt-0.5 flex items-center gap-1.5 text-[0.5625rem] font-bold tracking-[0.14em]" style={{ fontVariationSettings: '"wdth" 112' }}>
           ACADEMY <span className="h-px w-5 bg-current" />
         </span>
       </span>

@@ -122,7 +122,7 @@ export function Bit() {
       <div
         role="status"
         aria-live="polite"
-        className={`pointer-events-auto relative mb-14 max-w-[240px] rounded-lg border border-line-strong bg-surface-2 px-4 py-3 text-[0.875rem] leading-snug shadow-[0_12px_32px_-12px_rgb(0_0_0/0.6)] transition-all duration-300 sm:max-w-[280px] ${
+        className={`pointer-events-auto relative mb-14 max-w-60 rounded-lg border border-line-strong bg-surface-2 px-4 py-3 text-[0.875rem] leading-snug shadow-[0_12px_32px_-12px_rgb(0_0_0/0.6)] transition-all duration-300 sm:max-w-[280px] ${
           open && text ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-2 opacity-0"
         }`}
       >
@@ -149,7 +149,7 @@ export function Bit() {
 
       <button
         type="button"
-        className={`bit pointer-events-auto relative h-[92px] w-[76px] shrink-0 sm:h-[112px] sm:w-[92px] bit-${mood}`}
+        className={`bit pointer-events-auto relative h-[92px] w-[76px] shrink-0 sm:h-28 sm:w-[92px] bit-${mood}`}
         aria-label="Bit, o mascote. Clica para uma dica."
         onClick={() => {
           talk(TIPS[tip.current % TIPS.length], "party");

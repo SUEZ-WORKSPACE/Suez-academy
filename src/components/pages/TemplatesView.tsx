@@ -18,8 +18,8 @@ export function TemplatesView() {
         lead="Projectos de partida que usamos nas aulas: forkas, estudas a estrutura e transformas no teu próprio projecto. Clica num cartão para ver os ficheiros."
         bit="Clica num cartão para o virar 🔄"
       />
-      <section className="shell pb-[var(--section)]">
-        <div className="no-scrollbar -mx-[var(--gutter)] mb-10 flex gap-2 overflow-x-auto px-[var(--gutter)]" role="toolbar" aria-label="Filtrar por trilha">
+      <section className="shell pb-(--section)">
+        <div className="no-scrollbar -mx-(--gutter) mb-10 flex gap-2 overflow-x-auto px-(--gutter)" role="toolbar" aria-label="Filtrar por trilha">
           {options.map((o) => (
             <button
               key={o.slug}

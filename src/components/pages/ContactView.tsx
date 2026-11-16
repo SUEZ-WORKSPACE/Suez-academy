@@ -217,7 +217,7 @@ export function ContactView() {
           title="Mapa: Edifício Kwanza Sul, Belas Business Park, Luanda"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="block h-[420px] w-full border-0 [filter:invert(0.9)_hue-rotate(180deg)_saturate(0.6)]"
+          className="block h-[420px] w-full border-0 filter-[invert(0.9)_hue-rotate(180deg)_saturate(0.6)]"
         />
       </div>
     </PageShell>
